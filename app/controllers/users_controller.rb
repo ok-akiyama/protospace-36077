@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     @profile = user.profile
     @occupation = user.occupation
     @position = user.position
-    @prototypes = current_user.prototypes
     @user = User.find(params[:id])
     @prototypes = @user.prototypes.includes(:user) 
   end
